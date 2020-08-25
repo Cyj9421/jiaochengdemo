@@ -44,4 +44,9 @@ public class UserController {
         userService.save(userEntity);
         return "success";
     }
+    @RequestMapping("updateById")
+    public  String updateById(Integer id){
+        userService.updateById(id);
+        return "redirect:index.html";
+    }
 }

@@ -28,6 +28,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void updateById(Integer id) {
+        userDao.updateById(id);
+    }
+
+    @Override
     public void save(UserEntity userEntity) {
         userEntity.setRegstersTime(new Date());
         userEntity.setStatus(1);

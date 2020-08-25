@@ -34,5 +34,14 @@
                 #{status}
             )
     </insert>
-
+    <update id="updateById" parameterType="java.lang.Integer">
+        update t_user set
+        username=#{username},
+        password=#{password},
+        realname=#{realname},
+        sex=#{sex},
+        regstersTime=#{regstersTime},
+        status=#{status}
+        where id=#{id}
+    </update>
 </mapper>
