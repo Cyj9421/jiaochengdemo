@@ -14,7 +14,7 @@ public class UserEntity {
 
     private Date regstersTime;
 
-    private Integer status;
+    private int status;
 
     private String sex;
 
@@ -23,12 +23,14 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(Integer id, String username, String password, Date regstersTime, Integer status) {
+    public UserEntity(Integer id, String username,String realname,String sex, String password, Date regstersTime, int status) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.regstersTime = regstersTime;
         this.status = status;
+        this.realname=realname;
+        this.sex=sex;
     }
 //
 //    public Integer getId() {
@@ -74,12 +76,12 @@ public class UserEntity {
     @Override
     public String toString() {
         return "UserEntity{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", regstersTime=" + regstersTime +
-                ", sex=" + sex +
-                ", status=" + status +
-                '}';
+                "id=" + id + ","
+                + " username='" + username + ", "
+                + "password='" + password + ","
+                + "realname=" + realname + ","
+                + "regstersTime=" +regstersTime+ ","
+                + ", sex=" + sex + ", "
+                + "status=" + status + '}';
     }
 }

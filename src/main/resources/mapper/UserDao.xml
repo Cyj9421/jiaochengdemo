@@ -16,7 +16,6 @@
     </delete>
 
     <insert id="save" parameterType="cn.cyj.entity.UserEntity">
-
         INSERT INTO t_user (
                 username,
                 password,
@@ -34,14 +33,17 @@
                 #{status}
             )
     </insert>
-    <update id="updateById" parameterType="java.lang.Integer">
+
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="cn.cyj.entity.UserEntity">
+        select * from t_user where id=#{id}
+    </select>
+
+    <update id="update" parameterType="cn.cyj.entity.UserEntity">
         update t_user set
-        username=#{username},
-        password=#{password},
-        realname=#{realname},
-        sex=#{sex},
-        regstersTime=#{regstersTime},
-        status=#{status}
+        username='#{username}',
+        password='#{password}',
+        realname='#{realname}',
+        sex='{#sex}',
         where id=#{id}
     </update>
 </mapper>

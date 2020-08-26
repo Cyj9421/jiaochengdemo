@@ -17,5 +17,7 @@ public interface UserDao {
 
     public void save(UserEntity userEntity);
 
-    public  void  updateById(Integer id);
+    public  UserEntity  getUserById(Integer id);
+
+    public void update(@Param("content") UserEntity userEntity);
 }

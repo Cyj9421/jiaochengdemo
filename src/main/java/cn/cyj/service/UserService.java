@@ -12,8 +12,10 @@ public interface UserService {
     List<UserEntity> getAll(Map map);
     //删除指定id的用户
     void delById(Integer id);
-    //修改指定id的用户
-    public  void  updateById(Integer id);
+    //查找指定id的用户
+    public  UserEntity  getUserById(Integer id);
     // 保存用户
     public void save(UserEntity userEntity);
+    //修改用户
+    public void update(UserEntity userEntity);
 }
